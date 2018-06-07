@@ -13,7 +13,7 @@ class Book extends Component{
         return(
             <div className="book" id={book.id}>
                 <div className="book-top">
-                    <div className="book-cover" style={{backgroundImage: `url("${book.imageLinks.thumbnail}")` }}></div>
+                    <div className="book-cover" style={{ width: 128, height: 170, backgroundImage: book.imageLinks ? (`url(${book.imageLinks.thumbnail})`) : (`url(https://dummyimage.com/128x170/4f4f4f/ffffff.jpg&text=No+Book+Art)`) }}></div>
                     <ShelfChanger
                         book={book}
                         changeShelf={this.props.changeShelf}/>

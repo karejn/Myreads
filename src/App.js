@@ -54,7 +54,11 @@ class BooksApp extends React.Component {
                     this.setState({
                         searchBooks: books
                     });
-                }
+                } else {
+				this.setState({
+                searchBooks: []
+				});
+				}
 
             });
             } else {
